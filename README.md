@@ -6,16 +6,19 @@
 - senetence_id, person, sentence, scene, context으로 구성되었으며 학습에는 sentence-context pair 형식으로 활용하였다. 
 
 ## Model description 
-## Model
+### Model
 - klue/roberta-large
+- stratified 5 fold
+- Focalloss(gamma=4) 
+- soft voting 
 
 ### Hyperparameter setting
-
-
-
-
-
-
+> batch_size : 16
+> max_len = 64
+> epoch = 3
+> learning_rate = 2e-5
+> weight_decay = 0.01
+> warmup_rate = 0.1
 
 
 
