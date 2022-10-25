@@ -14,11 +14,17 @@
 
 ### Hyperparameter setting
 > batch_size : 16
+> 
 > max_len = 64
+> 
 > epoch = 3
+> 
 > learning_rate = 2e-5
+> 
 > weight_decay = 0.01
+> 
 > warmup_rate = 0.1
+> 
 
 
 
