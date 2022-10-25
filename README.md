@@ -18,7 +18,7 @@
 - AdamW optimizer
 - get_cosine_with_hard_restarts_schedule_with_warmup
 - Focalloss(gamma=4) 
-- soft voting(fold 별 학습 후 추론한 결과 앙상블) 
+- hard voting(fold 별 학습 후 추론한 결과 앙상블) 
 
 ### Hyperparameter setting
 
