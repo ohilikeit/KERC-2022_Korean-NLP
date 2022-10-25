@@ -13,7 +13,7 @@
 
 ## Model description 
 ### Model
-- klue/roberta-large
+- klue/roberta-large[huggingface](https://huggingface.co/klue/roberta-large?text=%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD%EC%9D%98+%EC%88%98%EB%8F%84%EB%8A%94+%5BMASK%5D+%EC%9E%85%EB%8B%88%EB%8B%A4.)
 - stratified 5 fold
 - AdamW optimizer
 - get_cosine_with_hard_restarts_schedule_with_warmup
@@ -29,9 +29,7 @@
     weight_decay = 0.01
     warmup_rate = 0.1
 
-### Structure
-
-
+## License 
 
 
 
