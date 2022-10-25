@@ -4,7 +4,7 @@
 전남대학교 인공감정지능 기초연구실 주최의 제 4회 한국인 감정인식 국제경진대회에 참여한 결과물이다.
 - 데이터셋은 드라마 '수상한 삼형제'의 1,513개 씬에서 12,289개 문장을 각각 dysphoria, euphoria, neutral 3 가지 감정 중 하나로 라벨링하여 제공되었다. 
 - senetence_id, person, sentence, scene, context으로 구성되었으며 학습에는 sentence-context pair 형식으로 활용하였다. 
-- Leaderboard private score : 0.7026 (13rd / 105 teams)
+- Leaderboard private score : 0.70344 (13rd / 105 teams)
 ### Environments
 - Google Colab Pro(TPU)
 - torch-xla, accelerator
@@ -18,7 +18,7 @@
 - AdamW optimizer
 - get_cosine_with_hard_restarts_schedule_with_warmup
 - Focalloss(gamma=4) 
-- hard voting(fold 별 학습 후 추론한 결과 앙상블) 
+- hard voting(fold 별 학습 후 추론한 결과 voting) 
 
 ### Hyperparameter setting
 
@@ -29,7 +29,11 @@
     weight_decay = 0.01
     warmup_rate = 0.1
 
-## License 
+## Conclusion
+- public score : 0.70655, private score : 0.70344 로 제출 파일 중 둘 사이가 가장 비슷했다. 
+    - 훈련 데이터 수가 7300여 개로 적어 무조건 public score가 높다고 좋은 모델이 아니였다. 
+- 
+- 
 
 
 
