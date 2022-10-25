@@ -12,7 +12,7 @@
 - torch==1.9.0
 
 ## Model description 
-### data augmentation(back translation)
+### Data augmentation(back translation)
 - [PORORO](https://github.com/kakaobrain/pororo/blob/master/README.ko.md) 라이브러리의 translation task 활용
 - 한국어 -> 영어 -> 한국어(7,339)
 - 한국어 -> 일본어 -> 한국어(7,339)
@@ -45,7 +45,7 @@ warmup_rate = 0.1
 ## Conclusion
 - public score : 0.70655, private score : 0.70344 로 제출 파일 중 둘 사이가 가장 비슷했다. 
     - 훈련 데이터 수가 7300여 개로 적어 무조건 public score가 높다고 좋은 모델이 아니였다.
-    - 기본 
+    - 기본 데이터만 가지고 학습한 경우보다 back translation 증강 후 학습한 경우가 robust했다. 
 - 
 - 
 
