@@ -14,9 +14,10 @@
 
 ## Model description 
 ### Data augmentation(back translation)
-- [PORORO](https://github.com/kakaobrain/pororo/blob/master/README.ko.md) 라이브러리의 translation task 활용하였다.
+- [PORORO](https://github.com/kakaobrain/pororo/blob/master/README.ko.md) 라이브러리의 translation task를 활용하였다.
 - 한국어 -> 영어 -> 한국어(7,339)
 - 한국어 -> 일본어 -> 한국어(7,339)
+- 통합 train_data : 22,017 rows X 4 columns
 ```
 from pororo import Pororo
 mt = Pororo(task="translation", lang="multi")
