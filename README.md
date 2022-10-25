@@ -16,15 +16,15 @@
 - [PORORO](https://github.com/kakaobrain/pororo/blob/master/README.ko.md) 라이브러리의 translation task 활용
 - 한국어 -> 영어 -> 한국어(7,339)
 - 한국어 -> 일본어 -> 한국어(7,339)
+```
+from pororo import Pororo
+mt = Pororo(task="translation", lang="multi")
 
-    from pororo import Pororo
-    mt = Pororo(task="translation", lang="multi")
-
-    def translate(text, lang):
-        txt = mt(text, src='ko', tgt=lang)
-        res = mt(txt, src=lang, tgt='ko')
-        return res
-
+def translate(text, lang):
+    txt = mt(text, src='ko', tgt=lang)
+    res = mt(txt, src=lang, tgt='ko')
+    return res
+```
 ### Model
 - klue/roberta-large([huggingface](https://huggingface.co/klue/roberta-large?text=%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD%EC%9D%98+%EC%88%98%EB%8F%84%EB%8A%94+%5BMASK%5D+%EC%9E%85%EB%8B%88%EB%8B%A4.))
 - stratified 5 fold
