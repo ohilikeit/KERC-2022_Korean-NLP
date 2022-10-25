@@ -50,4 +50,5 @@ warmup_rate = 0.1**
     - **기본 데이터만 가지고 학습한 경우보다 back translation 증강 후 학습한 경우가 robust했다.** 
 - accelerator와 torch-xla를 이용해 cloud tpu를 활용하는 방법을 익혔다. 
 - context 데이터의 결측치를 공백으로 대체하여 학습하였는데 이 부분을 적절히 처리했으면 더 나은 결과가 나왔을 것으로 예상된다. 
-- 클래스 불균형 해결을 위한 다양한 시도(**focal loss, label smoothing, class weight, focalsmoothing, ...**)를 하였으며 결과적으론 gamma를 4로 비교적 많이 준 focal loss가 가장 높은 성능을 보였다. 
+- 클래스 불균형 해결을 위한 다양한 시도(**focal loss, label smoothing, class weight, focalsmoothing, ...**)를 하였다.
+    - 결과적으론 gamma를 4로 비교적 많이 준 focal loss가 가장 높은 성능을 보였다. 
