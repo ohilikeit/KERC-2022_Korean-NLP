@@ -6,6 +6,7 @@
 - senetence_id, person, sentence, scene, context으로 구성되었으며 학습에는 sentence-context pair 형식으로 활용하였다. 
 - Leaderboard private score : 0.70344 (13rd / 105 teams)
 ### Environments
+------------
 - Google Colab Pro(TPU)
 - torch-xla, accelerator
 - cloud-tpu-client==0.10 
@@ -13,6 +14,7 @@
 
 ## Model description 
 ### data augmentation(back translation)
+------------
 - [PORORO](https://github.com/kakaobrain/pororo/blob/master/README.ko.md) 라이브러리의 translation task 활용
 - 한국어 -> 영어 -> 한국어(7,339)
 - 한국어 -> 일본어 -> 한국어(7,339)
@@ -26,6 +28,7 @@ def translate(text, lang):
     return res
 ```
 ### Model
+------------
 - klue/roberta-large([huggingface](https://huggingface.co/klue/roberta-large?text=%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD%EC%9D%98+%EC%88%98%EB%8F%84%EB%8A%94+%5BMASK%5D+%EC%9E%85%EB%8B%88%EB%8B%A4.))
 - stratified 5 fold
 - AdamW optimizer
@@ -34,6 +37,7 @@ def translate(text, lang):
 - hard voting(fold 별 학습 후 추론한 결과 voting) 
 
 ### Hyperparameter setting
+------------
 
     batch_size = 16
     max_len = 64
