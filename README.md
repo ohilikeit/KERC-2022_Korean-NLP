@@ -1,10 +1,10 @@
 ![image](https://user-images.githubusercontent.com/37128004/197667144-14df50d1-e2b5-415a-904d-b29e8ef9989d.png)
 # KERC 2022 - 한국어 대화 감정인식 -
 ## Introduction
-전남대학교 인공감정지능 기초연구실 주최의 제 4회 한국인 감정인식 국제경진대회에 참여한 결과물이다.
+전남대학교 인공감정지능 기초연구실 주최의 **제 4회 한국인 감정인식 국제경진대회**에 참여한 결과물이다.
 - 데이터셋은 드라마 '수상한 삼형제'의 1,513개 씬에서 12,289개 문장을 각각 dysphoria, euphoria, neutral 3 가지 감정 중 하나로 라벨링하여 제공되었다. 
 - senetence_id, person, sentence, scene, context으로 구성되었으며 학습에는 sentence-context pair 형식으로 활용하였다. 
-- Leaderboard private score : 0.70344 (13rd / 105 teams)
+- **Leaderboard private score : 0.70344 (13rd / 105 teams)**
 
 ## Environments
 - Google Colab Pro(TPU)
@@ -36,18 +36,18 @@ def translate(text, lang):
 - hard voting(fold 별 학습 후 추론한 결과 voting) 
 ### Hyperparameter setting
 ```
-batch_size = 16
+**batch_size = 16
 max_len = 64
 epoch = 3
 learning_rate = 2e-5
 weight_decay = 0.01
-warmup_rate = 0.1
+warmup_rate = 0.1**
 ```
 
 ## Conclusion
 - public score : 0.70655, private score : 0.70344 로 제출 파일 중 둘 사이가 가장 비슷했다. 
     - 훈련 데이터 수가 7300여 개로 적어 무조건 public score가 높다고 좋은 모델이 아니였다.
-    - 기본 데이터만 가지고 학습한 경우보다 back translation 증강 후 학습한 경우가 robust했다. 
+    - **기본 데이터만 가지고 학습한 경우보다 back translation 증강 후 학습한 경우가 robust했다.** 
 - accelerator와 torch-xla를 이용해 cloud tpu를 활용하는 방법을 익혔다. 
 - context 데이터의 결측치를 공백으로 대체하여 학습하였는데 이 부분을 적절히 처리했으면 더 나은 결과가 나왔을 것으로 예상된다. 
-- 클래스 불균형 해결을 위한 다양한 시도(focal loss, label smoothing, class weight, focalsmoothing, ...)를 하였으며 결과적으론 gamma를 4로 비교적 많이 준 focal loss가 가장 높은 성능을 보였다. 
+- 클래스 불균형 해결을 위한 다양한 시도(**focal loss, label smoothing, class weight, focalsmoothing, ...**)를 하였으며 결과적으론 gamma를 4로 비교적 많이 준 focal loss가 가장 높은 성능을 보였다. 
