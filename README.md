@@ -16,7 +16,7 @@
 - [PORORO](https://github.com/kakaobrain/pororo/blob/master/README.ko.md) 라이브러리의 translation task 활용
 - 한국어 -> 영어 -> 한국어(7,339)
 - 한국어 -> 일본어 -> 한국어(7,339)
-    
+
     from pororo import Pororo
     mt = Pororo(task="translation", lang="multi")
 
