@@ -36,12 +36,12 @@ def translate(text, lang):
 - hard voting(fold 별 학습 후 추론한 결과 voting) 
 ### Hyperparameter setting
 ```
-**batch_size = 16
+batch_size = 16
 max_len = 64
 epoch = 3
 learning_rate = 2e-5
 weight_decay = 0.01
-warmup_rate = 0.1**
+warmup_rate = 0.1
 ```
 
 ## Conclusion
